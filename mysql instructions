@@ -1,0 +1,55 @@
+user table: 
+mysql> describe user;
++-----------+--------------+------+-----+---------+-------+
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| username  | varchar(255) | NO   | PRI | NULL    |       |
+| address   | varchar(255) | YES  |     | NULL    |       |
+| email     | varchar(255) | YES  |     | NULL    |       |
+| firstname | varchar(255) | YES  |     | NULL    |       |
+| lastname  | varchar(255) | YES  |     | NULL    |       |
+| merchant  | tinyint(1)   | YES  |     | NULL    |       |
+| password  | varchar(255) | YES  |     | NULL    |       |
+| phone     | bigint       | NO   |     | NULL    |       |
++-----------+--------------+------+-----+---------+-------+
+
+insert ignore into user values('rakshita_Tantry','cosmos paradise','28rakshi@gmail.com','Rakshita','Tantry','','RakshitaTantry@123',8104577618);
+select *from user;
+
+Postman 
+post method: 
+json body:
+{
+	"username": "rakshita_Tantry",
+	"address": "paradise",
+	"email": "28rt@gmail.com",
+	"firstname": "Rakshita",
+	"lastname": "Tantry",
+	"merchant": 0,
+	"password": "RakshitaTantry@123",
+	"phone": 8564321121
+}
+
+{
+	"username": "seema_mistry",
+	"address": "tulip garden",
+	"email": "95Smistry@gmail.com",
+	"firstname": "Seema",
+	"lastname": "Mistry",
+	"merchant": 0,
+	"password": "SeemaMistry@111",
+	"phone": 9154768618
+}
+
+{
+    "username": "raktan,
+    "password": "rt@1234"
+}
+
+
+Command prompt: xmysql(postman to database)
+xmysql -h localhost -u root -p 123456 -d myusers
+
+POST /api/user 200 127 
+GET /api/user 200 380 
+
